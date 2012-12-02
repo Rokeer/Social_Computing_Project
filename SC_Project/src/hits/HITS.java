@@ -23,8 +23,8 @@ public class HITS {
 				while (itr.hasNext()) {
 					Node neighbor = itr.next();
 					Edge edge = graph.findEdge(n, neighbor);
-					n.setAuth(n.getAuth() + edge.getCapacity()
-							* neighbor.getHub());
+					n.setAuth(n.getAuth() + edge.getCapacity() * neighbor.getHub());
+					//n.setAuth(n.getAuth() + neighbor.getHub());
 				}
 				norm = norm + Math.sqrt(n.getAuth());
 			}
@@ -40,8 +40,8 @@ public class HITS {
 				while (itr.hasNext()) {
 					Node neighbor = itr.next();
 					Edge edge = graph.findEdge(n, neighbor);
-					n.setHub(n.getHub() + edge.getCapacity()
-							* neighbor.getAuth());
+					n.setHub(n.getHub() + edge.getCapacity() * neighbor.getAuth());
+					//n.setHub(n.getHub() + neighbor.getAuth());
 				}
 				norm = norm + Math.sqrt(n.getHub());
 			}

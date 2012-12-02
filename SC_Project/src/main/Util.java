@@ -17,14 +17,12 @@ public class Util {
 		double sum4Auth = 0;
 		double sum4Hub = 0;
 		for (Node n : graph.getVertices()) {
-			sum4PR = sum4PR + n.getPageRank();
 			sum4Auth = sum4Auth + n.getAuth();
 			sum4Hub = sum4Hub + n.getHub();
 		}
 		for (Node n : graph.getVertices()) {
 			n.setAuth(n.getAuth() / sum4Auth);
 			n.setHub(n.getHub() / sum4Hub);
-			n.setPageRank(n.getPageRank() / sum4PR);
 		}
 	}
 

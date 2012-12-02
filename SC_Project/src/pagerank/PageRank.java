@@ -25,17 +25,24 @@ public class PageRank {
 				while (itr.hasNext()) {
 					Node neighbor = itr.next();
 					Edge edge = graph.findEdge(n, neighbor);
-					/**
-					 * double allCapacity = 0; Iterator<Edge> edgeItr =
-					 * graph.getIncidentEdges(neighbor).iterator();
-					 * while(edgeItr.hasNext()) { Edge tmpEdge = edgeItr.next();
-					 * allCapacity = allCapacity + tmpEdge.getCapacity(); }
-					 **/
-					result = result + edge.getCapacity()
-							* (neighbor.getPageRank() / graph.degree(neighbor));
+
+					double allCapacity = 0;
+					Iterator<Edge> edgeItr = graph.getIncidentEdges(neighbor)
+							.iterator();
+					while (edgeItr.hasNext()) {
+						Edge tmpEdge = edgeItr.next();
+						allCapacity = allCapacity + tmpEdge.getCapacity();
+						//System.out.println("node: " + n.getUserID() + ", neighbor: " + neighbor.getUserID() + ", edge cap: " + tmpEdge.getCapacity());
+					}
+					//System.out.println("neighbor :"+allCapacity);
+					//System.out.println("node: " + n.getUserID() + ", neighbor: " + neighbor.getUserID() + ", edge cap: " + edge.getCapacity() + ", all cap: "+ (allCapacity/2));
+					result = result + edge.getCapacity() / (allCapacity)
+							* neighbor.getPageRank();
+					
+					//result = result + neighbor.getPageRank() / (graph.degree(neighbor) / 2);
 				}
-				result = (1 - d) + d * result;
-				// result = ((1 - d) / graph.getVertexCount()) + d * result;
+//				result = (1 - d) + d * result;
+				result = ((1 - d) / graph.getVertexCount()) + d * result;
 				n.setPageRank(result);
 			}
 		}
