@@ -45,7 +45,7 @@ public class GraphML {
 			n.setHub(1);
 		}
 		for (Edge e : graph.getEdges()) {
-			e.setCapacity(Double.parseDouble(edge_meta.get("d2").transformer
+			e.setCapacity(Double.parseDouble(edge_meta.get("d0").transformer
 					.transform(e)));
 		}
 

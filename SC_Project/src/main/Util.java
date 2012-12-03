@@ -35,11 +35,11 @@ public class Util {
 			Comparator4PR comparator4PR = new Comparator4PR();
 			Collections.sort(nodesList, comparator4PR);
 		} else if (type == 1) {
-			Comparator4HITS comparator4HITS = new Comparator4HITS();
-			Collections.sort(nodesList, comparator4HITS);
+			Comparator4Auth comparator4Auth = new Comparator4Auth();
+			Collections.sort(nodesList, comparator4Auth);
 		} else {
-			Comparator4Sum comparator4Sum = new Comparator4Sum();
-			Collections.sort(nodesList, comparator4Sum);
+			Comparator4Hub comparator4Hub = new Comparator4Hub();
+			Collections.sort(nodesList, comparator4Hub);
 		}
 
 		return nodesList;
@@ -67,11 +67,11 @@ public class Util {
 			Comparator4PR comparator4PR = new Comparator4PR();
 			Collections.sort(nodesList, comparator4PR);
 		} else if (type == 1) {
-			Comparator4HITS comparator4HITS = new Comparator4HITS();
+			Comparator4Auth comparator4HITS = new Comparator4Auth();
 			Collections.sort(nodesList, comparator4HITS);
 		} else {
-			Comparator4Sum comparator4Sum = new Comparator4Sum();
-			Collections.sort(nodesList, comparator4Sum);
+			Comparator4Hub comparator4Hub = new Comparator4Hub();
+			Collections.sort(nodesList, comparator4Hub);
 		}
 
 		return nodesList;

@@ -56,7 +56,7 @@ public class PageRank {
 
 					//System.out.println("neighbor :"+allCapacity);
 					//System.out.println("node: " + n.getUserID() + ", neighbor: " + neighbor.getUserID() + ", edge cap: " + edge.getCapacity() + ", all cap: "+ (allCapacity/2));
-					System.out.println("Node: "+n.getUserID()+", neighbor: "+neighbor.getUserID()+", cap: "+edge.getCapacity() + ", cap sum: "+neighbor.getCapSum());
+					//System.out.println("Node: "+n.getUserID()+", neighbor: "+neighbor.getUserID()+", cap: "+edge.getCapacity() + ", cap sum: "+neighbor.getCapSum());
 					
 					result = result + edge.getCapacity() / (neighbor.getCapSum()) * neighbor.getPageRank();
 					

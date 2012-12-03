@@ -6,7 +6,6 @@ public class Node {
 	private double mPageRank;
 	private double mAuth;
 	private double mHub;
-	private double mSum;
 	private double mCapSum;
 
 	public Node(int x) {
@@ -47,14 +46,6 @@ public class Node {
 
 	public void setHub(double hub) {
 		this.mHub = hub;
-	}
-
-	public double getSum() {
-		return mSum;
-	}
-
-	public void setSum(double sum) {
-		this.mSum = sum;
 	}
 	
 	public double getCapSum() {
