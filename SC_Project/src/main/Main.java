@@ -29,11 +29,12 @@ public class Main {
 		// 计算PR和HITS时迭代次数
 		int times = 100;
 		// 打印排名数
-		int top = 5;
+		int top = 0;
 		// graph类型，0表示undirected，1表示directed
-		int graphType = 1;
+		int graphType = 0;
 
 		//run(path, filename, graphType, d, weight, times, top);
+		
 		
 		for (int i = 0; i < 16; i++) {
 			filename = "cut15_No_"+i+".graphml";
@@ -105,13 +106,11 @@ public class Main {
 			sum.calculateDSum(graph, weight); // 计算总和
 			
 			
-			
+			/**
 			double tmp4PR = 0;
 			double tmp4Auth = 0;
 			double tmp4Hub = 0;
-			double
-
-			tmp4Sum = 0;
+			double tmp4Sum = 0;
 			for (Node n : graph.getVertices()) {
 				tmp4PR = tmp4PR +
 
@@ -126,7 +125,7 @@ public class Main {
 			System.out.println(tmp4Auth);
 			System.out.println(tmp4Hub);
 			System.out.println(tmp4Sum);
-			
+			**/
 			
 			ArrayList<Node> ranking = new ArrayList<Node>();
 			ranking = u.dRanking(graph, 0);
