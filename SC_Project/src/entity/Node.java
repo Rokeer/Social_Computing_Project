@@ -7,6 +7,7 @@ public class Node {
 	private double mAuth;
 	private double mHub;
 	private double mSum;
+	private double mCapSum;
 
 	public Node(int x) {
 		mID = x;
@@ -54,5 +55,13 @@ public class Node {
 
 	public void setSum(double sum) {
 		this.mSum = sum;
+	}
+	
+	public double getCapSum() {
+		return mCapSum;
+	}
+
+	public void setCapSum(double capsum) {
+		this.mCapSum = capsum;
 	}
 }
